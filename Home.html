@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aboreto&family=Antic+Didone&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #33333300;
+            padding: 10px;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            width: 115px;
+        }
+
+        .menu {
+            list-style: none;
+            margin: 0;
+            margin-left: 200px;
+            padding: 0;
+            display: flex;
+        }
+
+        .menu li {
+            margin-right: 25px;
+        }
+
+        .menu li:last-child {
+            margin-right: 0;
+        }
+
+        .menu li a {
+            color: white;
+            text-decoration: none;
+            font-family: "Roboto Serif", serif;
+
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: normal;
+
+        }
+
+        .whatsapp-icon {
+            color: white;
+            font-size: 24px;
+            margin-left: 120px;
+            transition: all 0.5s ease;
+            position: relative;
+        }
+
+        .whatsapp-icon:hover {
+            color: #25D366;
+            font-size: 20px;
+        }
+
+        .estimate-btn {
+            color: rgb(255, 255, 255);
+            padding: 6px 14px;
+            border: 1px solid #ffffff;
+            border-radius: 5px;
+            text-decoration: none;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 400;
+        }
+
+        .estimate-btn:hover {
+            background-color: #ffffff;
+            color: black;
+        }
+
+        .bgimage {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: url("https://images.unsplash.com/photo-1600585152220-90363fe7e115?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+            background-size: cover;
+            background-position: bottom;
+            background-repeat: no-repeat;
+            z-index: -1;
+            background-blend-mode: darken;
+        }
+
+        .bgimage:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.563);
+            z-index: -1;
+
+        }
+
+        section #one {
+            font-size: 100px;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 200;
+            color: white;
+            position: relative;
+            left: 50px;
+            top: 100px;
+        }
+
+        section #two {
+            font-size: 100px;
+            color: white;
+            position: relative;
+            left: 500px;
+            font-weight: 100;
+            font-family: "Antic Didone", serif;
+            font-style: normal;
+            top: 90px;
+        }
+
+        section #three {
+            font-size: 100px;
+            font-weight: lighter;
+            font-family: "Antic Didone", serif;
+            font-style: normal;
+            color: white;
+            position: relative;
+            left: 200px;
+            top: 90px;
+        }
+
+        .user-icon {
+            color: white;
+            font-size: 20px;
+            margin-right: 10px;
+
+            font-weight: 100;
+            transition: all 0.5s ease;
+
+        }
+
+        .why {
+            background-color: rgba(255, 255, 0, 0);
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 570px;
+            left: 0;
+        }
+
+        .why h1 {
+            text-align: center;
+            font-family: "Montserrat", sans-serif;
+            font-weight: bolder;
+            font-size: 42px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 0;
+        }
+
+        .column {
+            width: 100%;
+            padding: 20px;
+        }
+
+        .left-column {
+            border-right: 2px solid #ccc;
+        }
+
+        .heading {
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: "Montserrat", sans-serif;
+            ;
+            font-size: 18px;
+        }
+
+        .paragraph {
+            font-family: "Montserrat", sans-serif;
+            ;
+            font-size: 16px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .images {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 45px;
+        }
+
+        .image {
+            margin: 0 10px;
+            max-width: 200px;
+            max-height: 200px;
+        }
+
+        .button {
+            margin: 0 39%;
+            background-color: #007bff;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+
+            color: rgb(255, 255, 255);
+            padding: 10px 15px;
+            border: 1px solid #ffffff;
+            border-radius: 5px;
+            text-decoration: none;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 400;
+
+        }
+
+        .right-column img {
+            max-width: 700px;
+            height: 500px;
+            margin: 0px 20px;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            padding-top: 70px;
+            padding-left: 100px;
+            padding-right: 30px;
+            padding-bottom: 30px;
+            display: flex;
+            position: relative;
+            top: 900px;
+            font-family: "Montserrat", sans-serif;
+
+
+        }
+
+        .leftty-column {
+            display: flex;
+            justify-content: space-between;
+
+            width: 70%;
+        }
+
+
+        .rightty-column {
+            width: 30%;
+            padding-left: 32px;
+            padding-right: 32px;
+        }
+
+        .column-heading1 {
+            font-weight: bold;
+            font-size: 18px;
+            position: relative;
+            right: 75px;
+
+        }
+
+        .column-heading2 {
+            font-weight: bold;
+            font-size: 18px;
+            position: relative;
+            right: 150px;
+
+        }
+
+        .column-heading3 {
+            font-weight: bold;
+            font-size: 18px;
+            position: relative;
+            right: 46px;
+
+
+        }
+
+        .column-content {
+            margin-top: 30px;
+            /* text-align:left; */
+
+
+        }
+
+        .column-content p {
+            position: relative;
+            right: 220px;
+            /* text-align:center; */
+        }
+
+        .search-bar {
+            width: 100%;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .submit-button {
+            padding: 8px 15px;
+            margin-top: 20px;
+            background-color: #ffd700;
+            border: none;
+            border-radius: 5px;
+            color: #333;
+            cursor: pointer;
+            font-family: "Montserrat", sans-serif;
+
+        }
+
+        .social-media-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+
+        }
+
+        .social-media-icons i {
+            font-size: 20px;
+            margin: 0 5px;
+            padding-left: 7px;
+            transition: all 0.5s ease;
+
+        }
+
+        .social-media-icons i:hover {
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+
+        .column-heading {
+            font-size: 24px;
+            font-weight: bolder;
+            ;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="bgimage">
+
+        </div>
+        <nav class="navbar">
+            <img src="Screenshot_2024-03-16_204611-removebg-preview.png" alt="Hello World" class="logo">
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="About Us.html">About Us</a></li>
+                <li><a href="Products.html">Products</a></li>
+                <li><a href="Products detail.html">Products Details</a></li>
+                <li><a href="Contact Us.html">Contact Us</a></li>
+            </ul>
+            <a href="#" class="whatsapp-icon"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#" class="user-icon"><i class="fa-regular fa-user"></i></a>
+            <a href="#" class="estimate-btn">Get free Estimate</a>
+        </nav>
+    </header>
+    <section>
+        <span id="one">
+            CREATIVITY
+        </span><br>
+        <span id="two">MEETS</span><br>
+        <soan id="three">COMFORTS</span>
+    </section>
+    <section class="why">
+        <h1>Why Choose Us</h1>
+        <div class="container">
+            <div class="column left-column">
+                <div class="heading">
+                    <h2>Our Services</h2>
+                </div>
+                <div class="paragraph">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste
+                        natus error sit voluptatem accusantium doloremque laudantium.</p>
+                </div>
+                <div class="images">
+                    <img class="image" src="photo-1556702571-3e11dd2b1a92.jpeg" alt="Image 1">
+                    <img class="image" src="photo-1586023492125-27b2c045efd7.jpeg" alt="Image 2">
+                    <img class="image" src="premium_photo-1676968002767-1f6a09891350.jpeg" alt="Image 3">
+                </div>
+                <a href="#" class="button">Learn More</a>
+            </div>
+            <div class="column right-column">
+                <img src="photo-1616046229478-9901c5536a45.jpeg" alt="Right Image">
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <!-- Left Column -->
+        <div class="leftty-column">
+            <div class="column-heading1">Shop matcha</div>
+            <div class="column-content">
+                <p>Wholesale kit</p>
+                <p>The trial kit</p>
+                <p>Teaware</p>
+            </div>
+            <div class="column-heading2">Learn</div>
+            <div class="column-content">
+                <p>Matcha recipes</p>
+                <p>Caffeine content</p>
+                <p>Health Benefits</p>
+            </div>
+            <div class="column-heading3">More from tenzo</div>
+            <div class="column-content">
+                <p>Our Story</p>
+                <p>Blog</p>
+                <p>Affiliate</p>
+                <p>Contact Us</p>
+                <p>FAQs</p>
+                <p>Sign in</p>
+            </div>
+        </div>
+        <div class="rightty-column">
+            <div class="column-heading">Let's Stay Connected</div>
+            <div class="column-content">
+                <h5>Enter your email to unlock 10% off</h5>
+                <form>
+                    <input type="email" class="search-bar" placeholder="Your Email">
+                    <button type="submit" class="submit-button">Submit</button>
+                </form>
+                <h5>Follow Us</h5>
+                <div class="social-media-icons">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-linkedin-in"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

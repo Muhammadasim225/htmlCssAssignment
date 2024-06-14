@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Interior Design Studio</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* Add your CSS styling here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ededed
+        }
+
+
+        .container {
+            max-width: 1200px;
+            margin: 80px 200px;
+            padding: 20px;
+            background-color: rgba(130, 130, 52, 0);
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+
+        }
+
+
+        .btn-menu,
+        .btn-close {
+            padding: 10px 20px;
+            background-color: #007bff00;
+            color: #000000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-family: "Montserrat", sans-serif;
+            font-weight: bolder;
+
+        }
+
+        .btn-close {
+            margin-left: 10px;
+        }
+
+        .heading {
+            text-align: center;
+            margin-right: 100px;
+            font-size: 52px;
+            font-family: "Bebas Neue", sans-serif;
+            letter-spacing: 2px;
+        }
+
+        .about-content {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .left-column {
+            width: 30%;
+            height: 350px;
+
+        }
+
+        .left-column h4 {
+            text-align: left;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 600;
+
+        }
+
+        .right-column {
+            width: 70%;
+            height: 350px;
+            font-family: "Montserrat", sans-serif;
+
+        }
+
+
+        .left-column {
+            background-color: rgba(255, 192, 203, 0);
+
+        }
+
+        .left-column h4 {
+            line-height: 0.1px;
+
+        }
+
+
+
+        .right-column {
+            padding-left: 20px;
+        }
+
+        h3 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        .imag {
+            margin: 50px;
+        }
+
+        .imag img {
+            height: 600px;
+            width: 1170px;
+
+        }
+
+        .cont {
+            max-width: 1200px;
+            margin: 0 17px;
+            padding: 44px;
+            display: flex;
+            justify-content: space-between;
+            background-color: rgba(255, 255, 0, 0);
+
+        }
+
+        .leftty {
+            width: 48%;
+            height: 300px;
+
+        }
+
+        .rightty {
+            width: 48%;
+            margin-left: 20%;
+            height: 300px;
+        }
+
+        .big-font {
+            font-size: 34px;
+            font-style: italic;
+            font-weight: bolder;
+            font-family: "Playfair Display", serif;
+
+        }
+
+        .jinm {
+            width: 460px;
+            height: 250px;
+        }
+
+        .small-font {
+            font-size: 16px;
+            position: relative;
+            bottom: 20px;
+            left: 5px;
+            font-family: "Playfair Display", serif;
+            color: rgb(133, 131, 131);
+        }
+
+        .third_section {
+            max-width: 1210px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .left {
+            width: 48%;
+
+        }
+
+        .left .name {
+            height: 300px;
+            width: 300px;
+            position: relative;
+
+
+        }
+
+        .left .bame {
+            height: 300px;
+            width: 260px;
+            position: relative;
+            left: 10px;
+            top: 130px;
+
+
+        }
+
+        .left .tame {
+            height: 300px;
+            width: 300px;
+            position: relative;
+            top: 10px;
+        }
+
+        .right {
+            width: 48%;
+            margin-left: 4%;
+        }
+
+        .right h1 {
+            text-align: center;
+            font-size: 52px;
+            font-family: "Bebas Neue", sans-serif;
+            letter-spacing: 2px;
+        }
+
+        .map {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(255, 255, 0, 0);
+            padding: 10px;
+        }
+
+        .map .one {
+            padding: 10px;
+            background-color: rgba(0, 0, 255, 0);
+        }
+
+        .map .one p {
+            line-height: 17px;
+            position: relative;
+            color: rgb(101, 101, 101);
+
+            bottom: 25px;
+
+        }
+
+        .ico {
+            display: flex;
+            justify-content: flex-end;
+            padding: 10px;
+
+        }
+
+        .ico p {
+            padding-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <button class="btn-menu">menu.</button>
+        <button class="btn-close">close.</button>
+    </div>
+    <div class="container">
+        <h1 class="heading">About Us.</h1>
+
+        <div class="about-content">
+            <div class="left-column">
+                <h4>About Us..</h4>
+                <h4>Our team..</h4>
+                <h4>Press..</h4>
+            </div>
+            <div class="right-column">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus
+                    error sit voluptatem accusantium doloremque laudantium Lorem ipsum, dolor sit amet consectetur
+                    adipisicing elit. Natus accusantium maiores sit quae commodi aliquam! Repellat corrupti blanditiis
+                    magni eveniet voluptates ducimus nulla ..</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus
+                    error sit voluptatem accusantium doloremque laudantium Lorem ipsum, dolor sit amet consectetur
+                    adipisicing elit. Laborum libero id accusantium nulla culpa pariatur illum repellat dolorem atque,
+                    distinctio rem corporis impedit modi natus ..</p>
+            </div>
+        </div>
+    </div>
+    <div class="imag">
+        <img src="Interior-Design-Best-of-Year-2023-BHDM-Design-idx231201_boy_Budget02_2.jpg" alt="">
+    </div>
+    <div class="cont">
+        <div class="leftty">
+            <p class="big-font">" Transforming spaces with creativity and passion. Let us bring your vision to life. "
+            </p>
+            <p class="small-font">Jean Phillippe Nuel, Director</p>
+        </div>
+        <div class="rightty">
+            <img src="photo-1556702571-3e11dd2b1a92.jpeg" class="jinm" alt="Interior Design Image">
+        </div>
+    </div>
+    <div class="third_section">
+        <div class="left">
+            <img src="profile.person_image.jpeg" class="name" alt="">
+            <img src="444705_741265.jpg" class="bame" alt="">
+            <img src="orgpsych-alumni-cori-davis.jpg" class="tame" alt="">
+        </div>
+        <div class="right">
+            <h1>The TEAM.</h1>
+            <P class="tim">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nisi sapiente vel
+                architecto eos nam eius, ad perspiciatis placeat voluptates totam eaque aut nihil voluptas, ipsam
+                explicabo! Dignissimos ea dicta dolores rem sequi facere vel hic reiciendis nisi reprehenderit obcaecati
+                ipsa, placeat enim a perferendis atque! Est eveniet non deleniti!</P>
+            <P class="tim">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur amet et culpa minus
+                natus in, ratione cum quas repellendus rem placeat libero recusandae maxime dolorem nulla aspernatur
+                expedita sequi mollitia, odit voluptas? Deleniti impedit ad saepe obcaecati asperiores qui quia,
+                molestias esse deserunt assumenda nihil, ipsa illo, quasi vitae perspiciatis.</P>
+            <div class="map">
+                <div class="one">
+                    <h1>600</h1>
+                    <p>million sq ft of sustainable work</p>
+                </div>
+                <div class="one">
+                    <h1>700</h1>
+                    <p>million sq ft of sustainable work</p>
+
+                </div>
+                <div class="one">
+                    <h1>1.2</h1>
+                    <p>million sq ft of sustainable work</p>
+
+                </div>
+                <div class="one">
+                    <h1>110</h1>
+                    <p>million sq ft of sustainable work</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ico">
+        <p>instagram.</p>
+        <p>facebook.</p>
+        <p>twitter.</p>
+    </div>
+</body>
+
+</html>

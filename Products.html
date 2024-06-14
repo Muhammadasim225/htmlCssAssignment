@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products Page</title>
+<link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Antic+Didone&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Proxima+Nova');
+/* Global Styles */
+body {
+  margin: 0;
+  background-color: #0a253b; /* White background */
+  color: white; /* Light blue text */
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #0a253b; /* Dark blue navbar */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+.navbar img{
+    width:140px;
+    display:block;
+    margin:auto;
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  justify-content:center;
+  background-color:#0051af26; /* Gold background */
+}
+
+.nav-links li {
+  margin-right: 30px;
+  padding:10px;
+  
+}
+.nav-links li a{
+  text-decoration: none;
+  color:white;
+  font-family: 'proxima-nova', sans-serif;
+  font-weight:100px;
+
+}
+.nav-links li a:hover{
+    cursor:pointer;
+    text-decoration: underline;
+}
+
+.navv {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-start;
+  background-color: #6c757d; /* Light blue background */
+}
+
+.navv li {
+  padding: 10px;
+  font-size: 12px;
+  border-right: 2px solid black;
+  transition: all 0.5s ease;
+  font-family: 'proxima-nova', sans-serif;
+
+}
+
+.navv li:hover {
+  background-color: #1a1a2e; /* Dark blue background on hover */
+  cursor: pointer;
+}
+
+/* Products Section Styles */
+.products {
+  padding: 20px;
+}
+
+.section-heading {
+  text-align: center;
+  font-family: 'proxima-nova', sans-serif;
+
+  font-size: 40px;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  width: calc(33.33% - 100px);
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  transition: all 0.5s ease;
+  background-color:white;
+  color:black;
+  font-family: 'proxima-nova', sans-serif;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  cursor: pointer;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.card h2 {
+  margin-top: 10px;
+}
+
+.card p {
+  margin-top: 10px;
+  font-family: 'proxima-nova', sans-serif;
+  font-size:14px;
+
+}
+
+.card button {
+  margin-top: 10px;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  background-color: #1fc1c3;
+    color: #fff;
+}
+
+.card button:hover {
+  background-color: #6c757d; /* Light blue button background on hover */
+  color: white;
+  cursor:pointer;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #0a253b;
+    border-top:1px solid white;
+    border-bottom:none; /* White background */
+    border-right:none; /* White background */
+    border-left:none; /* White background */
+  color: white;
+  padding: 50px; /* Increased padding */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo {
+  margin-right: 20px;
+}
+
+.footer-links {
+  list-style-type: none;
+  display: flex;
+  text-align:center;
+  margin-left:210px;
+  
+}
+.hemlo{
+    margin-top: 0px;
+    margin-left:490px;
+  border: none;
+  padding: 15px 76px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  background-color: #1fc1c3;
+    color: #fff;
+    cursor:pointer;
+
+}
+.hemlo:hover{
+    background-color: #6c757d; /* Light blue button background on hover */
+  color: white;
+}
+
+.footer-links li {
+  margin-right: 30px;
+
+}
+.footer-links li a{
+    text-decoration:none;
+    font-family: 'proxima-nova', sans-serif;
+    /* font-weight: bold;; */
+    color:white;
+    font-size:16px;
+
+}
+
+.footer-social-icons {
+  display: flex;
+}
+
+.footer-social-icons i {
+  margin-right: 10px;
+  font-size: 18px;
+  transition: all 0.5s ease;
+}
+.footer-social-icons i:hover {
+    transform: scale(1.09);
+    cursor:pointer;
+   
+}
+
+.footer-copyright {
+  font-size: 12px;
+  text-align:center;
+  position:relative;
+  top:45px;
+  font-family: 'proxima-nova', sans-serif;
+  font-size:15px;
+}
+.footer-left img{
+    width:115px;
+}
+
+i {
+  margin-left: 15px;
+  transition:all 0.5s ease;
+  
+
+}
+i:hover{
+   transform: scale(1.05);
+   cursor:pointer;
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+ <img src="Screenshot_2024-03-16_204611-removebg-preview.png" alt="logo">
+  <div class="social-icons">
+    <!-- Insert social media icons here -->
+    <!-- Just for demonstration purposes, you can replace it with actual social media icons -->
+    <i class="fa-brands fa-facebook-f"></i>
+    <i class="fa-brands fa-instagram"></i>
+    <i class="fa-brands fa-twitter"></i>
+  </div>
+</nav>
+<ul class="nav-links">
+  <li><a href="Home.html">Home</a></li>
+  <li><a href="#">Menu</a></li>
+  <li><a href="About Us.html">About Us</a></li>
+  <li><a href="Contact Us.html">Contact Us</a></li>
+
+</ul>
+<ul class="navv">
+  <li>Furniture</li>
+  <li>Lighting</li>
+  <li>Decorative Accessories</li>
+  <li>Window Treatment</li>
+  <li>Textiles</li>
+  <li>Wall Coverings</li>
+  <li>Flooring</li>
+  <li>Kitchen and Bathroom Fixtures</li>
+  <li>Hardware and Fittings</li>
+  <li>Appliances and Electronics</li>
+</ul>
+
+<!-- Products Section -->
+<section class="products">
+  <h1 class="section-heading">Products</h1>
+  <div class="cards-container">
+    <!-- Cards -->
+    <div class="card">
+      <img src="Thomas-Abraham-For-IDeA-Design-House-The-Optimus-1-e1643811239230.jpg" alt="Product 1">
+      <h2>Pacman-Chair-Table</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua....</p>
+      <button id="action">See More</button>
+    </div>
+    <div class="card">
+        <img src="pexels-photo-1648776.jpeg" alt="Product 1">
+        <h2>Product 1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <button>See More</button>
+      </div>
+      <div class="card">
+        <img src="Thomas-Abraham-For-IDeA-Design-House-The-Optimus-1-e1643811239230.jpg" alt="Product 1">
+        <h2>Product 1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <button>See More</button>
+      </div>
+  
+    <div class="card">
+        <img src="pexels-lisa-fotios-1090638.jpg" alt="Product 1">
+        <h2>Product 1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <button>See More</button>
+      </div>
+      <div class="card">
+        <img src="pexels-photo-1648776.jpeg" alt="Product 1">
+        <h2>Product 1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <button>See More</button>
+      </div>
+      <div class="card">
+        <img src="Thomas-Abraham-For-IDeA-Design-House-The-Optimus-1-e1643811239230.jpg" alt="Product 1">
+        <h2>Product 1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <button>See More</button>
+      </div>
+      <div class="card">
+        <img src="yaya-pillow.jpg.webp" alt="Product 1">
+        <h2>Product 1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <button>See More</button>
+      </div>
+      <div class="card">
+        <img src="Interior-Design-Best-of-Year-2023-BHDM-Design-idx231201_boy_Budget02_2.jpg"Product 1">
+        <h2>Product 1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <button>See More</button>
+      </div>
+      <div class="card">
+        <img src="FeaturedProduct_1_01-1.jpg" alt="Product 1">
+        <h2>Product 1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <button>See More</button>
+      </div>
+
+      
+    <!-- Repeat this card structure for other products -->
+  </div>
+  <br><br>
+  <button class="hemlo">See More</button><br><br>
+
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+      <!-- Left side with logo and links -->
+      <div class="footer-left">
+        <img src="Screenshot_2024-03-16_204611-removebg-preview.png" alt="Logo" class="footer-logo">
+        <ul class="footer-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <!-- Social media icons and copyright text -->
+      <div class="footer-right">
+        <div class="footer-social-icons">
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-twitter"></i>
+        </div>
+      </div>
+      
+    </div>
+    <p class="footer-copyright">Copyright © 2024 Bridge</p>
+
+  </footer>
+<script>
+  document.getElementById("action").addEventListener("click",function(){
+    window.location.href = "Products detail.html";
+
+  })
+</script>
+</body>
+</html>

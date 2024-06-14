@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Detail</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Aboreto&family=Antic+Didone&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
+    rel="stylesheet">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      background-color: #0a253b;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+    }
+
+    .navbar img {
+      width: 100px;
+      display: block;
+      margin: auto;
+    }
+
+    .nav-links {
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+      background-color: #0a253b;
+    }
+
+    .nav-links li {
+      margin-right: 30px;
+      padding: 10px;
+
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: white;
+      font-family: 'proxima-nova', sans-serif;
+      font-weight: 100px;
+
+    }
+
+    .nav-links li a:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    .navv {
+      list-style-type: none;
+      display: flex;
+      justify-content: flex-start;
+      background-color: #6c757d;
+    }
+
+    .navv li {
+      padding: 10px;
+      font-size: 12px;
+      border-right: 2px solid black;
+      transition: all 0.5s ease;
+      font-family: 'proxima-nova', sans-serif;
+
+    }
+
+    .navv li:hover {
+      background-color: #1a1a2e;
+      cursor: pointer;
+    }
+
+    i {
+      margin-left: 15px;
+      transition: all 0.5s ease;
+
+
+    }
+
+    i:hover {
+      transform: scale(1.05);
+      cursor: pointer;
+    }
+
+    .product-detail {
+      display: flex;
+      justify-content: space-between;
+      margin: 50px;
+      padding: 50px;
+      border-radius: 20px;
+      background-color: #ffffff;
+      box-shadow: 1px 1px 7px 1px rgba(0, 0, 0, 0.213);
+
+
+    }
+
+    .product-image {
+      flex: 1;
+
+
+    }
+
+    .product-image img {
+      width: 500px;
+      height: 450px;
+      border-radius: 20px;
+    }
+
+    .product-info {
+      flex: 1;
+      padding-left: 20px;
+    }
+
+    .block {
+      line-height: 5px;
+    }
+
+    .product-info h2 {
+      margin-top: 0;
+      font-size: 30px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 500;
+      color: #0a253b;
+
+
+    }
+
+    .product-info h4 {
+      margin-top: 0;
+      font-size: 22px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 200;
+    }
+
+    .product-info p {
+      margin-bottom: 20px;
+      font-family: "Montserrat", sans-serif;
+
+    }
+
+    .price {
+      font-size: 24px;
+      margin-top: 20px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 400;
+      font-size: 32px;
+      color: #0a253b;
+
+
+    }
+
+    .abs {
+      position: relative;
+
+      font-weight: 400;
+      font-size: 18px;
+      font-family: "Montserrat", sans-serif;
+      left: 150px;
+      bottom: 10px;
+      color: #0a253b;
+
+    }
+
+    .button {
+      text-decoration: none;
+      border: none;
+      border-radius: 5px;
+      border: 2px solid #0a253b;
+      cursor: pointer;
+      /*  */
+      color: rgb(0, 0, 0);
+      padding: 5px 10px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      transition: all 0.3s ease;
+
+    }
+
+    .button:hover {
+      background-color: #0a253b;
+      color: white;
+      border: 2px solid #0a253b;
+
+    }
+
+    .footer {
+      background-color: #0a253b;
+      color: #fff;
+      text-align: center;
+      padding: 40px 0px;
+      position: absolute;
+      bottom: 50;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar">
+    <img src="Screenshot_2024-03-16_204611-removebg-preview.png" alt="logo">
+    <div class="social-icons">
+      <i class="fa-brands fa-facebook-f"></i>
+      <i class="fa-brands fa-instagram"></i>
+      <i class="fa-brands fa-twitter"></i>
+    </div>
+  </nav>
+  <ul class="nav-links">
+    <li><a href="Home.html">Home</a></li>
+    <li><a href="#">Menu</a></li>
+    <li><a href="About Us.html">About Us</a></li>
+    <li><a href="Contact Us.html">Contact Us</a></li>
+
+  </ul>
+  <div class="product-detail">
+    <div class="product-image">
+      <img src="Thomas-Abraham-For-IDeA-Design-House-The-Optimus-1-e1643811239230.jpg" alt="Product Image">
+    </div>
+    <div class="product-info">
+      <div class="block">
+        <h2>Pacman-Chair-Table-Bookcase-1</h2>
+        <h4>Monomando Barnardo</h4>
+        <p>Product Code: ABC123</p><br><br><br><br><br>
+      </div>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vehicula, purus in suscipit ultricies, metus justo
+        tristique elit, eget fermentum quam sem vel leo Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+        dolorum recusandae quisquam itaque hic obcaecati? Quos tenetur fugit ad, non !.</p>
+      <div class="price">$5,673.00</div>
+      <span class="abs">MXN</span><br><br>
+      <a href="#" class="button">Buy Now</a>
+    </div>
+  </div>
+  <footer class="footer">
+    &copy; 2024 Your Company. All rights reserved.
+  </footer>
+</body>
+
+</html>
